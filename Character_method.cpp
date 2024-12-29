@@ -24,6 +24,4 @@ float Character::auto_speed() const {
 }
 
 // Destructor
-Character::~Character() {
-    std::cout << "Destructor called" << std::endl;
-}
+Character::~Character() {}

@@ -1,3 +1,4 @@
+#pragma once
 #include "Character.h"
 #include <string> 
 
@@ -6,5 +7,12 @@ public:
     std::string WhatAmI() const override {
         return "Mario";
     }
+
+    //destructor
+    ~Mario() override { 
+        std::cout << "Destructor called for Mario\n";
+    }
+
+
 
 };

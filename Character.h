@@ -1,3 +1,4 @@
+#pragma once
 #include <string> 
 
 class Character {
@@ -17,7 +18,7 @@ void Break();
 float auto_speed() const;
 
 //Destructor
-~Character() ;
+virtual ~Character() ;
 
 //Virtual function purely abstract
 virtual std::string WhatAmI() const = 0;

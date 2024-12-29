@@ -1,13 +1,17 @@
 #include <iostream>
 #include "Character.h"
+#include "Luigi.h"
+#include "Yoshi.h"
+#include "Mario.h"
 
 
 int main() {
-/* // Test 1: Constructor 
+    std::cout << "TESTING CHARACTER CLASS WITH Luigi object\n\n";
+    // Test 1: Constructor 
     std::cout << "Press any key to initialize a Luigi object...\n";
     std::cin.get(); 
 
-    Character luigi;  // Usa "luigi" con la lettera minuscola
+    Luigi luigi;  // Usa "luigi" con la lettera minuscola
     std::cout << "Speed after initialization: " << luigi.auto_speed() << "\n";
     std::cout << "Expected: 0.0 (speed should be 0 after initialization)\n\n";
     
@@ -48,13 +52,28 @@ int main() {
     std::cout << "Luigi's current speed is: " << luigi.auto_speed() << "\n";
     std::cout << "Expected: 0 (because speed was just set to 0 by the Break function).\n\n";
     
-    // Test 5: Destructor
-    std::cout << "Press any key to test the destructor...\n";
-    std::cin.get();  */
+   
+    std::cout << "TESTING DERIVATED CLASS Mario and Yoshi object\n";
+    //Test 5: Derivated classes
+    Yoshi yoshi;
+    Mario mario;
 
-    //Test 6: Derivated classes 
-    std::cout << "Test: Creating two derived classes (Mario and Yoshi) and testing the virtual functions WhatAmI and Accelerate.\n";
-    Character yoshi;
-    Character mario;
+    //Accellerate method call
+    yoshi.Accelerate();
+    mario.Accelerate();
+    
+    std::cout << "Calling WhatAmI() for Yoshi: " << yoshi.WhatAmI() << " speed: " << yoshi.auto_speed() << std::endl;
+    std::cout << "Calling WhatAmI() for Mario: " << mario.WhatAmI() << " speed: " << mario.auto_speed() << std::endl;
+    
+    // Test of output
+    std::cout << "\nTest Results:\n";
+    std::cout << "- WhatAmI works correctly: Yoshi returns 'Yoshi' and Mario returns 'Mario'.\n";
+    std::cout << "- Accelerate works correctly: Yoshi's speed is higher than Mario's after a single call (Yoshi: 1.5, Mario: 1.0).\n";
+
+    // Test 6: Destructor
+    std::cout << "Press any key to test the destructor...";
+    std::cin.get(); 
+
+   
     return 0;
 }

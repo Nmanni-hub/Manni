@@ -1,3 +1,4 @@
+#pragma once
 #include "Character.h"
 #include <string> 
 
@@ -7,9 +8,15 @@ public:
         return "Yoshi";
     }
 
-    void Accelerate() {
-    if (speed_ < max_speed_) override {
+    void Accelerate()  override {
+    if (speed_ < max_speed_) {
         speed_ += 1.5f;
     }
     }
+
+    //destructor
+    ~Yoshi() override { 
+        std::cout << "Destructor called for Yoshi\n";
+    }
+
 };
