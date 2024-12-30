@@ -77,7 +77,7 @@ int main() {
     std::cout << "- Accelerate works correctly: Yoshi's speed is higher than Mario's after a single call (Yoshi: 1.5, Mario: 1.0).\n";
 
     // Test 6: Destructor
-    std::cout << "Press any key to test the destructor...\n";
+    std::cout << "Press any key to test the destructor..." << std::endl;
     std::cin.get(); 
 
    
