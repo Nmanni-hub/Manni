@@ -73,11 +73,11 @@ int main() {
     
     // Test of output
     std::cout << "\nTest Results:\n";
-   std::cout << "- WhatAmI works correctly: Yoshi returns '" << n_crests << "crested Yoshi' and Mario returns 'Mario'.\n";
+    std::cout << "- WhatAmI works correctly: Yoshi returns '" << n_crests << " crested Yoshi' and Mario returns 'Mario'.\n";
     std::cout << "- Accelerate works correctly: Yoshi's speed is higher than Mario's after a single call (Yoshi: 1.5, Mario: 1.0).\n";
 
     // Test 6: Destructor
-    std::cout << "Press any key to test the destructor...";
+    std::cout << "Press any key to test the destructor...\n";
     std::cin.get(); 
 
    

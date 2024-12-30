@@ -8,8 +8,14 @@
 int main() {
 
     //Creation of partecipant 
-    Yoshi yoshi;
-    Mario mario;
+    // Ask user for the number of crests for Yoshi
+    int n_crests;
+    std::cout << "Enter the number of crests for Yoshi: ";
+    std::cin >> n_crests;  // Get the number of crests from user input
+
+    // Create Yoshi object with the specified number of crests
+    Yoshi yoshi(n_crests);  // Pass the number of crests to the constructor of Yoshi
+    Mario mario;  // Create Mario object
     
     std::cout << "\nThis is a 5-second race.\n";
     
@@ -19,7 +25,6 @@ int main() {
     std::cout << "2. " << yoshi.WhatAmI() << std::endl;
     
     std::cout << "\nLET THE RACE BEGIN!\n";
-
     //Define a container
     std::vector<Character*> participants;
 
