@@ -55,8 +55,14 @@ int main() {
    
     std::cout << "TESTING DERIVATED CLASS Mario and Yoshi object\n";
     //Test 5: Derivated classes
-    Yoshi yoshi;
-    Mario mario;
+    // Ask user for the number of crests for Yoshi
+    int n_crests;
+    std::cout << "Enter the number of crests for Yoshi: ";
+    std::cin >> n_crests;  // Get the number of crests from user input
+
+    // Create Yoshi object with the specified number of crests
+    Yoshi yoshi(n_crests);  // Pass the number of crests to the constructor of Yoshi
+    Mario mario;  // Create Mario object
 
     //Accellerate method call
     yoshi.Accelerate();
@@ -67,7 +73,7 @@ int main() {
     
     // Test of output
     std::cout << "\nTest Results:\n";
-    std::cout << "- WhatAmI works correctly: Yoshi returns 'Yoshi' and Mario returns 'Mario'.\n";
+   std::cout << "- WhatAmI works correctly: Yoshi returns '" << n_crests << "crested Yoshi' and Mario returns 'Mario'.\n";
     std::cout << "- Accelerate works correctly: Yoshi's speed is higher than Mario's after a single call (Yoshi: 1.5, Mario: 1.0).\n";
 
     // Test 6: Destructor
